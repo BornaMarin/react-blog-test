@@ -1,0 +1,4 @@
+{
+    "*.scss": "stylelint",
+    "*.{ts,tsx,json}": ["prettier --check", "eslint --quiet"]
+}

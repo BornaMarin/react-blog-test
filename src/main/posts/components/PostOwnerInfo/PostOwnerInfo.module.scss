@@ -1,0 +1,9 @@
+@import "../../../../styles/colors";
+
+.owner {
+  display: flex;
+  .username {
+    margin-left: 2px;
+    color: $color-light-gray;
+  }
+}

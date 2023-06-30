@@ -1,0 +1,67 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:storybook/recommended",
+        "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": ["react", "@typescript-eslint"],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "rules": {
+        "eqeqeq": ["error", "always"],
+        "no-console": "warn",
+        "no-else-return": "warn",
+        "arrow-body-style": ["warn", "as-needed"],
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off",
+        "react/self-closing-comp": [
+            "warn",
+            { "component": true, "html": true }
+        ],
+        "@typescript-eslint/no-empty-interface": "warn",
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/prefer-optional-chain": "warn",
+        "@typescript-eslint/no-unused-vars": [
+            "warn",
+            { "args": "all", "argsIgnorePattern": "^_" }
+        ],
+        "@typescript-eslint/no-unnecessary-condition": [
+            "warn",
+            { "allowConstantLoopConditions": false }
+        ],
+        "@typescript-eslint/no-empty-function": [
+            "warn",
+            { "allow": ["constructors", "arrowFunctions"] }
+        ],
+        "@typescript-eslint/no-magic-numbers": [
+            "warn",
+            { "ignore": [-1, 0, 1], "enforceConst": true }
+        ],
+        "@typescript-eslint/consistent-type-imports": [
+            "warn",
+            {
+                "prefer": "type-imports"
+            }
+        ]
+    }
+}

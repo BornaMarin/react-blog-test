@@ -1,0 +1,31 @@
+@import "src/styles/colors";
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 8px 0;
+  border-top: $border-dark;
+  position: sticky;
+  bottom: 0;
+  background-color: $color-bg;
+  .item {
+    cursor: pointer;
+    margin-right: 2px;
+    width: 42px;
+    height: 42px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 50%;
+    border: $border-dark;
+    background-color: inherit;
+    color: white;
+    text-align: center;
+    &:hover {
+      background-color: rgba($color: $color-dark-gray, $alpha: 0.2);
+    }
+  }
+}
+.active {
+  background-color: rgba($color: $color-dark-gray, $alpha: 0.2);
+}

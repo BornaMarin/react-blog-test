@@ -1,0 +1,18 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  background-color: gainsboro;
+  padding: 16px;
+  border-radius: 24px;
+  .input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    width: 100%;
+    display: block;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+}

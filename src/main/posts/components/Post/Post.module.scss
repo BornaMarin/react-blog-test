@@ -1,0 +1,37 @@
+@import "../../../../styles/colors";
+
+.post {
+  padding: 1rem;
+  display: flex;
+  color: #fff;
+  border-bottom: $border-dark;
+  &:hover {
+    background-color: rgba($color: $color-dark-gray, $alpha: 0.2);
+  }
+  .content {
+    margin-left: 10px;
+    flex-grow: 1;
+    .header {
+      margin: 8px 0;
+      font-weight: bold;
+    }
+    .footer {
+      display: flex;
+      justify-content: end;
+      .button {
+        padding: 8px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: $color-bg;
+        color: $color-light-gray;
+        &:hover {
+          color: rgba($color: $color-blue, $alpha: 1);
+        }
+      }
+      .icon {
+        margin-right: 4px;
+      }
+    }
+  }
+}

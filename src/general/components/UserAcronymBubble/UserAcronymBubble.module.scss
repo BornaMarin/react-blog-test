@@ -1,0 +1,11 @@
+@import "src/styles/colors";
+
+.userBubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: $border-dark;
+  height: 44px;
+  min-width: 44px;
+}

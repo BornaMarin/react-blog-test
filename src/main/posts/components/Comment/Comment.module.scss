@@ -1,0 +1,41 @@
+@import "../../../../styles/colors";
+.comment {
+  display: flex;
+  color: #fff;
+  border-bottom: $border-dark;
+  .connector {
+    min-width: 44px;
+    position: relative;
+    .line {
+      position: absolute;
+      border-left: $border-dark;
+      width: 1px;
+      height: 100%;
+      margin: 0 auto;
+      left: 22px;
+    }
+    .curvedLine {
+      position: absolute;
+      height: 26px;
+      width: 22px;
+      left: 22px;
+      margin-left: auto;
+      border-left: $border-dark;
+      border-bottom: $border-dark;
+      border-radius: 0 0 0 10px;
+    }
+  }
+  .main {
+    padding: 1rem;
+    .email {
+      color: $color-light-gray;
+      margin-bottom: 1rem;
+    }
+    .content {
+      padding: 1rem;
+      font-size: 14px;
+      border-radius: 20px;
+      background-color: $hr-color;
+    }
+  }
+}
