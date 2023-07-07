@@ -3,6 +3,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
 import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 interface header {
   content?: ReactNode;
@@ -16,9 +17,9 @@ const FeedHeader: FC<header> = ({ content, hideBackBtn }) => {
   return (
     <div className={`${styles.postsHeader} ${justifyHeader}`}>
       {hideBackBtn ? null : (
-        <div>
+        <Link to={"/posts"} style={{ textDecoration: "none", color: "white" }}>
           <FontAwesomeIcon icon={faArrowLeft} size={"2x"} />
-        </div>
+        </Link>
       )}
       {content}
     </div>

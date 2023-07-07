@@ -35,6 +35,7 @@ const Posts: FC = () => {
   const handleSearchChange = (value: string) => {
     setPostsParams({ ...postsParams, q: value });
   };
+
   const handlePageChange = (value: number) => {
     setPostsParams({ ...postsParams, _page: value });
   };
@@ -42,6 +43,7 @@ const Posts: FC = () => {
   const noDataState = () => (
     <div className={styles.loadingContainer}>No data</div>
   );
+
   return (
     <>
       <FeedHeader

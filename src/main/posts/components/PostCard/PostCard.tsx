@@ -31,6 +31,7 @@ const PostCard: FC<PostType> = ({
           <button
             aria-label="Show Comments"
             onClick={handleOnClick}
+            disabled={!expand}
             className={styles.button}
           >
             <FontAwesomeIcon className={styles.icon} icon={faComment} />
