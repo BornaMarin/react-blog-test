@@ -5,21 +5,24 @@ import type { FC } from "react";
 import type { ReactNode } from "react";
 
 interface header {
-  content: ReactNode;
+  content?: ReactNode;
   hideBackBtn: boolean;
 }
 
-const FeedHeader: FC<header> = ({ content, hideBackBtn }) => (
-  <div className={styles.postsHeader}>
-    {hideBackBtn ? (
-      <h2>Route name</h2>
-    ) : (
-      <div>
-        <FontAwesomeIcon icon={faArrowLeft} size={"2x"} />
-      </div>
-    )}
-    {content}
-  </div>
-);
+const FeedHeader: FC<header> = ({ content, hideBackBtn }) => {
+  const justifyHeader = hideBackBtn
+    ? styles.justifyEnd
+    : styles.justifySpaceBetween;
+  return (
+    <div className={`${styles.postsHeader} ${justifyHeader}`}>
+      {hideBackBtn ? null : (
+        <div>
+          <FontAwesomeIcon icon={faArrowLeft} size={"2x"} />
+        </div>
+      )}
+      {content}
+    </div>
+  );
+};
 
 export default FeedHeader;

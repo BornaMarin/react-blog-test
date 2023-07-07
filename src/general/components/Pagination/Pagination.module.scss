@@ -3,7 +3,6 @@
 .pagination {
   display: flex;
   justify-content: center;
-  width: 100%;
   padding: 8px 0;
   border-top: $border-dark;
   position: sticky;
@@ -18,14 +17,16 @@
     font-size: 14px;
     border-radius: 50%;
     border: $border-dark;
-    background-color: inherit;
     color: white;
     text-align: center;
     &:hover {
       background-color: rgba($color: $color-dark-gray, $alpha: 0.2);
     }
   }
-}
-.active {
-  background-color: rgba($color: $color-dark-gray, $alpha: 0.2);
+  .activePage {
+    background-color: rgba($color: $color-dark-gray, $alpha: 0.2);
+  }
+  .inactivePage {
+    background-color: $color-bg;
+  }
 }

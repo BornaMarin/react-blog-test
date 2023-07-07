@@ -2,7 +2,7 @@ interface PostParams {
   _page: number;
   _limit: number;
   userId: number | null;
-  search: string;
+  q: string;
   _embed: string;
   _expand: string;
 }
